@@ -96,3 +96,5 @@ Here's a [link to my video result](./output.mp4). The lines are a little wobbly 
 From trying the challenge video, my current pipeline is still very sensitive to shadows and objects that are close to the lane lines. I think that would be improved by tighter masking, as well as refining my choices for thresholding functions and limits used.
 
 Other improvements would be to use the data from previous frames more. Currently I am using a moving average over 20 frames to produce a less jittery output. I'm also doing a very basic evaluation of the fitted lines to accept or reject the prediction for a given frame. That evaluation could be made more robust by comparing the calculated values with the previous accepted values to make sure they don't differ to much.
+
+Also note that my solution re-uses a lot of code from the lectures for this project, and previous lectures.

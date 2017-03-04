@@ -45,6 +45,7 @@ Camera calibration was done using the get_calib_objects function to get a set of
 To demonstrate this step, I will describe how I apply the distortion correction to one of the test images like this one:
 - undistorted image-
 ![alt text][undist_img]
+
 ####2. Thresholds
 I experimented with a number of different binary threshold functions, finally settling on a combination of the x gradient, y gradient, directional gradient and the S channel of the HLS colourspace.
 In my experiments, the directional gradient was quite noisy but was useful as a final filter nonetheless.
@@ -95,6 +96,6 @@ Here's a [link to my video result](./output.mp4). The lines are a little wobbly 
 
 From trying the challenge video, my current pipeline is still very sensitive to shadows and objects that are close to the lane lines. I think that would be improved by tighter masking, as well as refining my choices for thresholding functions and limits used.
 
-Other improvements would be to use the data from previous frames more. Currently I am using a moving average over 20 frames to produce a less jittery output. I'm also doing a very basic evaluation of the fitted lines to accept or reject the prediction for a given frame. That evaluation could be made more robust by comparing the calculated values with the previous accepted values to make sure they don't differ to much.
+Other improvements would be to use the data from previous frames more. Currently I am using a moving average over 20 frames to produce a less jittery output. I'm also doing a very basic evaluation of the fitted lines to accept or reject the prediction for a given frame. That evaluation could be made more robust by comparing the calculated values with the previous accepted values to make sure they don't differ too much.
 
 Also note that my solution re-uses a lot of code from the lectures for this project, and previous lectures.

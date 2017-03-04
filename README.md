@@ -42,7 +42,7 @@ Camera calibration was done using the get_calib_objects function to get a set of
 
 - starting image-
 ![alt text][original]
-To demonstrate this step, I will describe how I apply the distortion correction to one of the test images like this one:
+
 - undistorted image-
 ![alt text][undist_img]
 
